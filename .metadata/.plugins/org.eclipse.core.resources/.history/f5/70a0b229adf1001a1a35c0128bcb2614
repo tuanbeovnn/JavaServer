@@ -1,0 +1,17 @@
+package FormData;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/formServlet")
+public class ServletSearch {
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+			
+			
+		 // Here we start assembling the HTML content
+	}
+}

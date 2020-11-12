@@ -1,0 +1,10 @@
+127.0.0.1 - - [24/Oct/2020:20:31:40 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:31:41 +0300] "GET /Assignment3_v1/ HTTP/1.1" 200 355
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:31:48 +0300] "POST /Assignment3_v1/filedownloadservlet HTTP/1.1" 200 17503
+127.0.0.1 - - [24/Oct/2020:20:32:05 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:32:05 +0300] "GET /Assignment3_v2/ HTTP/1.1" 200 502
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:32:22 +0300] "POST /Assignment3_v2/ViewResourceServlet HTTP/1.1" 200 142621
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:32:39 +0300] "POST /Assignment3_v2/ViewResourceServlet HTTP/1.1" 500 -
+127.0.0.1 - - [24/Oct/2020:20:33:01 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:33:02 +0300] "GET /Assignment3_v3/ HTTP/1.1" 200 493
+0:0:0:0:0:0:0:1 - - [24/Oct/2020:20:33:06 +0300] "POST /Assignment3_v3/filedownloadservlet HTTP/1.1" 500 3569

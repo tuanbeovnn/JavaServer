@@ -1,0 +1,30 @@
+package FormData;
+
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/searchName")
+public class ServletSearch {
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+		String submit = request.getParameter("submit");
+		if(submit ==null ) {
+        	String name = request.getParameter("searchByName");
+        	for(MessageForm m : saveMess) {
+        		if(m.getContentMessage().equalsIgnoreCase(name)) {
+        			saveMess.add(m);
+        		}
+        	}
+        	// get response writer
+		}
+	}
+		 
+}

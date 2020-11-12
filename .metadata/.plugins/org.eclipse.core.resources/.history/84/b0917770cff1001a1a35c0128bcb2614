@@ -1,0 +1,63 @@
+package FormData;
+
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/searchName")
+public class ServletSearch {
+	
+	SimpleDateFormat simple = new SimpleDateFormat("dd-MM-yyyy");
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+		ArrayList<MessageForm> saveMess = MessageData.listMess;
+		List<MessageForm> res = new ArrayList<>();
+		
+		String submit = request.getParameter("submit");
+		if(submit == null ) {
+        	String name = request.getParameter("searchByName");
+        	for(MessageForm m : saveMess) {
+        		if(m.getContentMessage().equalsIgnoreCase(name)) {
+        			res.add(m);
+        		}
+        	}
+        	
+        	// get response writer
+		}
+		PrintWriter pw = response.getWriter();
+        pw.println("<html><head>");
+        if(res.size()!=0) {
+	        	pw.write("<h2> Following data received sucessfully.. <h2> <br>");
+	        	pw.println("<body>");
+	        	pw.println("<table>");
+	            pw.println("<tr>");
+	            pw.println("<th>FirstName</th>");
+	            pw.println("<th>Message</th>");
+	            pw.println("<th>Date</th>");
+	            pw.println("</tr>");
+            
+            for(MessageForm mess : res) {
+            	pw.println("<tr>");
+				pw.println("<td>" + mess.getFirstName() + "</td>");
+				pw.println("<td>" + mess.getContentMessage() + "</td>");
+				pw.println("<td>" + simple.format(mess.getDate()) + "</td>");
+				pw.println("</tr>");
+            }
+            	pw.println("</table>");
+
+            
+              pw.println("<a href='index.html'>Back</a>");
+            
+        }else {
+        	pw.println("Not Found");
+        }
+	}
+		 
+}

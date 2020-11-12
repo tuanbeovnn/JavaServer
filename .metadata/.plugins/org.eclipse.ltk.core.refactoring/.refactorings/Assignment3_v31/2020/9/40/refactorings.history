@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;servlet.ViewResourceServlet&apos; to &apos;DownloadFile&apos;&#x0A;- Original project: &apos;Assignment3_v31&apos;&#x0A;- Original element: &apos;servlet.ViewResourceServlet&apos;&#x0A;- Renamed element: &apos;servlet.DownloadFile&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ViewResourceServlet&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;servlet{ViewResourceServlet.java[ViewResourceServlet" matchStrategy="1" name="DownloadFile" qualified="false" references="true" similarDeclarations="false" stamp="1601472738424" textual="false" version="1.0"/>
+</session>

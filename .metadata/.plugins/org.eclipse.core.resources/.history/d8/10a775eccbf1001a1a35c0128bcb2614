@@ -1,0 +1,134 @@
+package FormData;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
+
+
+@WebServlet("/formServlet")
+public class Servlet extends HttpServlet{
+	
+	
+	
+	ArrayList<MessageForm> saveMess = new ArrayList<MessageForm>();
+	SimpleDateFormat simple = new SimpleDateFormat("dd-MM-yyyy");
+
+	
+	
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+			
+			
+		 // Here we start assembling the HTML content
+		    
+		
+	}
+	
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+		
+		
+		String submitBtn = request.getParameter("submit");
+		if(submitBtn !=null ) {
+        	String firstName = request.getParameter("firstname");
+    		String message = request.getParameter("message");
+    		MessageForm mess = new MessageForm(firstName,new Date(),message);
+    		saveMess.add(mess);
+        }
+		response.setContentType("text/html");
+		
+		 // get response writer
+        PrintWriter pw = response.getWriter();
+        pw.println("<html><head>");
+       
+        
+        if(saveMess.size()!=0) {
+	        	pw.write("<h2> Following data received sucessfully.. <h2> <br>");
+	        	pw.println("<body>");
+	        	pw.println("<table>");
+	            pw.println("<tr>");
+	            pw.println("<th>FirstName</th>");
+	            pw.println("<th>Message</th>");
+	            pw.println("<th>Date</th>");
+	            pw.println("</tr>");
+            
+            for(MessageForm mess : saveMess) {
+            	pw.println("<tr>");
+				pw.println("<td>" + mess.getFirstName() + "</td>");
+				pw.println("<td>" + mess.getContentMessage() + "</td>");
+				pw.println("<td>" + simple.format(mess.getDate()) + "</td>");
+				pw.println("</tr>");
+            }
+            	pw.println("</table>");
+
+            
+              pw.println("<a href='index.html'>Back</a>");
+            
+        }else {
+        	pw.println("Not Found");
+        }
+        
+//        pw.println("<form action='searchName' method='POST'>");
+        pw.println("<h6>Search By First Name</h6>");
+        pw.println("<input type='search' name ='searchByName'>");
+        pw.println("<input type='submit' name='submit' value='Search'>");
+//        pw.println("</form>");
+        pw.println("</body>");
+        pw.println("</html>");
+        pw.close();
+        
+        
+        
+        String submit = request.getParameter("submit");
+        
+        if(submit == null ) {
+        	String name = request.getParameter("searchByName");
+        	for(MessageForm m : saveMess) {
+        		if(m.getContentMessage().equalsIgnoreCase(name)) {
+        			saveMess.add(m);
+        		}
+        	}
+        	// get response writer
+            PrintWriter pw1 = response.getWriter();
+            pw.println("<html><head>");
+           
+            
+            if(saveMess.size()!=0) {
+     	        	pw1.write("<h2> Following data Search.. <h2> <br>");
+     	        	pw1.println("<body>");
+     	        	pw1.println("<table>");
+     	            pw1.println("<tr>");
+     	            pw1.println("<th>FirstName</th>");
+     	            pw1.println("<th>Message</th>");
+     	            pw1.println("<th>Date</th>");
+     	            pw1.println("</tr>");
+                
+                for(MessageForm mess12 : saveMess) {
+                	pw1.println("<tr>");
+     				pw1.println("<td>" + mess12.getFirstName() + "</td>");
+     				pw1.println("<td>" + mess12.getContentMessage() + "</td>");
+     				pw1.println("<td>" + simple.format(mess12.getDate()) + "</td>");
+     				pw1.println("</tr>");
+                }
+                	pw1.println("</table>");
+                	pw1.println("<a href='index.html'>Back</a>");
+                
+            }else {
+            	pw.println("Not Found");
+     			
+            }
+        }
+		response.setContentType("text/html");
+       
+	}
+
+}

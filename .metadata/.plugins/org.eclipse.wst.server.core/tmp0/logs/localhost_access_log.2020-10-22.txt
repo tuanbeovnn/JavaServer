@@ -1,0 +1,8 @@
+127.0.0.1 - - [22/Oct/2020:14:58:09 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:58:10 +0300] "GET /Assignment2_2/ HTTP/1.1" 200 495
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:58:10 +0300] "GET /Assignment2_2/Style/style.css HTTP/1.1" 200 1035
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:58:11 +0300] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:58:53 +0300] "GET /Assignment2_v2/ HTTP/1.1" 200 1748
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:59:03 +0300] "POST /Assignment2_v2/formServlet HTTP/1.1" 200 3076
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:59:03 +0300] "GET /Assignment2_v2/Style/style.css HTTP/1.1" 200 888
+0:0:0:0:0:0:0:1 - - [22/Oct/2020:14:59:24 +0300] "GET /Assignment2_v2/getdata?getdata=GetData HTTP/1.1" 200 3076

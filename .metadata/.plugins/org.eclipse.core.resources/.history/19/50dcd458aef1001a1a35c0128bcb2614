@@ -1,0 +1,24 @@
+package FormData;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/searchName")
+public class ServletSearch {
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+		String submit = request.getParameter("submit");
+		if(submit ==null ) {
+        	String name = request.getParameter("searchByName");
+        	ArrayList<MessageForm> saveMess = new ArrayList<MessageForm>();
+    		
+        }
+			
+	}
+}

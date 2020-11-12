@@ -1,0 +1,15 @@
+127.0.0.1 - - [23/Sep/2020:21:40:31 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:40:32 +0300] "GET /Java_WebServlet/ HTTP/1.1" 200 1147
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:40:32 +0300] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:40:35 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 772
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:40:35 +0300] "GET /Java_WebServlet/Style/style.css HTTP/1.1" 200 863
+127.0.0.1 - - [23/Sep/2020:21:41:35 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:52:00 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 774
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:52:08 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 851
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:52:10 +0300] "GET /Java_WebServlet/index.html HTTP/1.1" 200 1147
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:21:52:13 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 917
+127.0.0.1 - - [23/Sep/2020:22:07:35 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:07:39 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 775
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:09:00 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 837
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:09:16 +0300] "POST /Java_WebServlet/formServlet HTTP/1.1" 200 906
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:09:21 +0300] "POST /Java_WebServlet/searchName HTTP/1.1" 200 105

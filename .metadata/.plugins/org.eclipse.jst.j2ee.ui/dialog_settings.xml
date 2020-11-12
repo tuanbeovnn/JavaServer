@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="J2EE_EXPORT_OVERWRITE" value="true"/>
+	<item key="J2EE_EXPORT_SOURCE" value="true"/>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v8.5"/>
+		<item value="Apache Tomcat v8.5.9"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/ass73user.war"/>
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass73admin.war"/>
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/ass72user.war"/>
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass72admin.war"/>
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/ass71user.war"/>
+	</list>
+</section>

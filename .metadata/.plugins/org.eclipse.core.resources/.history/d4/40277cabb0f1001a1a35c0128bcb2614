@@ -1,0 +1,56 @@
+package FormData;
+
+import java.util.Date;
+
+public class MessageForm {
+	private String firstName;
+	private String lastName;
+	private Date date;
+	private String contentMessage;
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getContentMessage() {
+		return contentMessage;
+	}
+	public void setContentMessage(String contentMessage) {
+		this.contentMessage = contentMessage;
+	}
+	
+	
+	public MessageForm() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "MessageForm [firstName=" + firstName + ", lastName=" + lastName + ", date=" + date + ", contentMessage="
+				+ contentMessage + "]";
+	}
+	
+	public MessageForm(String firstName, String lastName, Date date, String contentMessage) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.date = date;
+		this.contentMessage = contentMessage;
+	}
+	
+	
+	
+}

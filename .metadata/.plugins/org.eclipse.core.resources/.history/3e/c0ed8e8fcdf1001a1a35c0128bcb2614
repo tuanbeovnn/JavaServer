@@ -1,0 +1,5 @@
+package FormData;
+
+public class MessageData {
+	public static ArrayList<MessageForm> listMess = new ArrayList<MessageForm>();
+}

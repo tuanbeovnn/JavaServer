@@ -1,0 +1,7 @@
+127.0.0.1 - - [23/Oct/2020:13:56:12 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [23/Oct/2020:13:56:13 +0300] "GET /Assignment3_v1/ HTTP/1.1" 200 355
+127.0.0.1 - - [23/Oct/2020:13:57:38 +0300] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [23/Oct/2020:13:57:39 +0300] "GET /Assignment2_2/ HTTP/1.1" 200 495
+0:0:0:0:0:0:0:1 - - [23/Oct/2020:13:57:43 +0300] "GET /Assignment2_2/index.html?userName=admin&password=&submit=Login HTTP/1.1" 200 525
+0:0:0:0:0:0:0:1 - - [23/Oct/2020:13:57:45 +0300] "GET /Assignment2_2/index.html?userName=admin&password=hgfhg&submit=Login HTTP/1.1" 200 103
+0:0:0:0:0:0:0:1 - - [23/Oct/2020:13:57:46 +0300] "GET /Assignment2_2/index.html HTTP/1.1" 200 495

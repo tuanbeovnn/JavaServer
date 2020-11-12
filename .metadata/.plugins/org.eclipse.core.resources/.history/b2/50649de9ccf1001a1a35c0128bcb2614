@@ -1,0 +1,59 @@
+package FormData;
+
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/searchName")
+public class ServletSearch {
+	ArrayList<MessageForm> saveMess = new ArrayList<MessageForm>();
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			   throws ServletException, java.io.IOException {
+		String submit = request.getParameter("submit");
+		if(submit ==null ) {
+        	String name = request.getParameter("searchByName");
+        	for(MessageForm m : saveMess) {
+        		if(m.getContentMessage().equalsIgnoreCase(name)) {
+        			saveMess.add(m);
+        		}
+        	}
+        	// get response writer
+            PrintWriter pw = response.getWriter();
+            pw.println("<html><head>");
+           
+            SimpleDateFormat simple = new SimpleDateFormat("dd-MM-yyyy");
+            if(saveMess.size()!=0) {
+     	        	pw.write("<h2> Following data Search.. <h2> <br>");
+     	        	pw.println("<body>");
+     	        	pw.println("<table>");
+     	            pw.println("<tr>");
+     	            pw.println("<th>FirstName</th>");
+     	            pw.println("<th>Message</th>");
+     	            pw.println("<th>Date</th>");
+     	            pw.println("</tr>");
+                
+                for(MessageForm mess12 : saveMess) {
+                	pw.println("<tr>");
+     				pw.println("<td>" + mess12.getFirstName() + "</td>");
+     				pw.println("<td>" + mess12.getContentMessage() + "</td>");
+     				pw.println("<td>" + simple.format(mess12.getDate()) + "</td>");
+     				pw.println("</tr>");
+                }
+                	pw.println("</table>");
+                  pw.println("<a href='index.html'>Back</a>");
+                
+            }else {
+            	pw.println("Not Found");
+     			
+            }
+        }
+		response.setContentType("text/html");
+	}
+		 
+}

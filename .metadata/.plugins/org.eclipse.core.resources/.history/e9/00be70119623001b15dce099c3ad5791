@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Assignment72_user</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+
+		<web-resource-collection>
+
+			<web-resource-name>Entire Application2</web-resource-name>
+
+
+			<url-pattern>/*</url-pattern>
+
+		</web-resource-collection>
+
+		<auth-constraint>
+
+			<!-- This role is not in the default user directory -->
+
+			<role-name>user</role-name>
+
+		</auth-constraint>
+
+
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/login_error.html</form-error-page>
+		</form-login-config>
+		<!--Realms in Tomcat are databases with user ID and password information. 
+			Realms in Tomcat can be configured via the server.xml or context.xml files. -->
+	</login-config>
+
+
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>formdata.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>user</servlet-name>
+		<servlet-class>formdata.User</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+</web-app>
