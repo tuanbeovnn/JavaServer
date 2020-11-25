@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Example_61</display-name>
+  <description>
+Servlet Demos.
+</description>
+<!-- Define servlets that are included in the example application -->
+<!-- <security-constraint>
+<web-resource-collection>
+<web-resource-name>Servlet information page</web-resource-name>
+<url-pattern>/*</url-pattern>
+<http-method>GET</http-method>
+<http-method>POST</http-method>
+</web-resource-collection>
+
+<user-data-constraint>
+The following forces using HTTPS protocol
+<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+</user-data-constraint>
+</security-constraint> -->
+
+<context-param>
+<param-name>resource_dir</param-name>
+<param-value>files/public</param-value>
+</context-param>
+
+<context-param>
+<param-name>temp_image_dir</param-name>
+<param-value>temp_images</param-value>
+</context-param>
+
+<servlet>
+<servlet-name>DatabaseHandlingServlet</servlet-name>
+<servlet-class>servlet.DatabaseHandlingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DatabaseHandlingServlet</servlet-name>
+<url-pattern>/db_handling_servlet</url-pattern>
+</servlet-mapping>
+</web-app>

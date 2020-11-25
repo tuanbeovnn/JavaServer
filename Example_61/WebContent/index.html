@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Database Servlet</title>
+<style type="text/css">
+body {
+   background-color:#fffffe;
+}
+ th {
+ border: 1px solid black;
+ border-style: collapse;
+ 
+ 
+}
+</style>
+</head>
+<body >
+<h2>Table Query Application</h2>
+<form method="POST" action="db_handling_servlet">
+<table>
+<tr><td>Database Username</td><td>
+<input type="text" name="db_username" placeholder="db username" value="mg" size="20">
+</td></tr>
+<tr><td>Database Password</td><td>
+<input type="password" name="db_password" placeholder="db password"  value="2g7GSHyqCRNn" size="20">
+</td></tr>
+<tr><td>Database Name</td><td>
+<input type="text" name="db_name" placeholder="db name" value="mg_Temp" size="20">
+</td></tr>
+<tr><td>Table Name</td><td>
+<input type="text" name="db_table_name" placeholder="db table name" value="contacts" size="20">
+</td></tr>
+<tr><td>Insert Data</td>
+<td>
+<table>
+<tr><td>
+<input type="text" name="table_row_data" placeholder="id;name;phone" size="20">
+</td><td><input type="checkbox" name="encrypt_data">Encrypt data</td>
+ </table>
+ </td>
+</tr>
+<tr style="text-align: right;">
+<td></td>
+<td>
+<table>
+<tr>
+<td><input type="Submit" name="submit" value="Read Table"></td>
+<td><input type="Submit" name="submit" value="Create Table"></td>
+<td><input type="Submit" name="submit" value="Insert Data"></td>
+<td><input type="Submit" name="submit" value="Update Data"></td>
+<td><input type="Submit" name="submit" value="Read Images"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+

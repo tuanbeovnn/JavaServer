@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Assignment72admin">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <property name="context-root" value="Assignment72admin"/>
-        <property name="java-output-path" value="/Assignment72admin/build/classes"/>
-    </wb-module>
-</project-modules>

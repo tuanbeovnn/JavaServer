@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="time"/>
+		<item key="selection" value="setTempImageDir"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="time"/>
-			<item value="doGet(request, response);"/>
-			<item value="Following data received sucessfully.."/>
-			<item value="getfilename"/>
-			<item value="fileName"/>
-			<item value="getServletContext"/>
-			<item value="download"/>
-			<item value="download_file"/>
-			<item value="getContentType"/>
-			<item value="downloadDir"/>
-			<item value="Java_WebServlet"/>
-			<item value="Java_WebServlet&apos;"/>
-			<item value="@WebServlet(&quot;/index.html&quot;)&#x0A;public class login extends HttpServlet {&#x0A;&#x09;private final String validUserName = &quot;admin&quot;;&#x0A;&#x09;private final String validPassWord = &quot;root&quot;;&#x0A;&#x09;private boolean checkParameter(String params) {&#x0A;&#x09;&#x09;if(params!=null &amp;&amp; !params.trim().isEmpty() &amp;&amp; !params.equals(&quot;null&quot;)) {&#x0A;&#x09;&#x09;&#x09;return true;&#x0A;&#x09;&#x09;}else {&#x0A;&#x09;&#x09;&#x09;return false;&#x0A;&#x09;&#x09;}&#x0A;&#x09;}&#x0A;&#x09;&#x0A;&#x09;public void doGet(HttpServletRequest request, HttpServletResponse response)&#x0A;            throws ServletException, java.io.IOException {&#x0A;        // Here we read the value of the submit button&#x0A;        String action = request.getParameter(&quot;submit&quot;);&#x0A;        String firstName = request.getParameter(&quot;firstname&quot;);&#x0A;        String lastName = request.getParameter(&quot;lastname&quot;);&#x0A;        String email = request.getParameter(&quot;email&quot;);&#x0A;        String msg = request.getParameter(&quot;msg&quot;);&#x0A;        &#x0A;        boolean fNameCheck = checkParameter(firstName);&#x0A;        boolean lNameCheck = checkParameter(lastName);&#x0A;        /*&#x0A;         * boolean emailCheck = (email != null &amp;&amp; !email.trim().isEmpty() &amp;&amp; email&#x0A;         * .indexOf(&quot;@&quot;) != -1);&#x0A;         */&#x0A;        boolean emailCheck = checkParameter(email) &amp;&amp; (email.indexOf(&quot;@&quot;) &gt; 0);&#x0A;        boolean msgCheck = checkParameter(msg);&#x0A;        // Here we set the MIME type of the response, &quot;text/html&quot;&#x0A;        response.setContentType(&quot;text/html&quot;);&#x0A;        // Here we use a PrintWriter to send text data&#x0A;        // to the client who has requested the servlet&#x0A;        PrintWriter out = response.getWriter();&#x0A;        &#x0A;        // Here we start assembling the HTML content&#x0A;        out.println(&quot;&lt;!Doctype html&gt;&lt;html&gt;&lt;head&gt;&quot;);&#x0A;        out.println(&quot;&lt;title&gt;User Registeration Page&lt;/title&gt;&quot;);&#x0A;        out.println(&quot;&lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;styles/styles.css&apos;&gt;&quot;);&#x0A;        out.println(&quot;&lt;/head&gt;&lt;body&gt;&quot;);&#x0A;        out.println(&quot;&lt;div class=&apos;user_form&apos;&gt;&quot;);&#x0A;        out.println(&quot;&lt;h2&gt;Please submit your information&lt;/h2&gt;&quot;);&#x0A;        // Here we set the value for method to post, so that&#x0A;        // the servlet service method calls doPost in the&#x0A;        // response to this form submit&#x0A;        out.println(&quot;&lt;form method=&apos;GET&apos; + action=&apos;index.html&apos;&gt;&quot;);&#x0A;        out.println(&quot;&lt;table border&gt;&lt;tr&gt;&lt;th&gt;&quot;);&#x0A;        out.println(&quot;Your first name: &lt;/th&gt;&lt;td &quot;);&#x0A;        if (action != null &amp;&amp; !fNameCheck)&#x0A;            out.println(&quot; style=&apos;background-color:red;&apos;&quot;);&#x0A;        out.println(&quot;&gt;&lt;input type=&apos;text&apos; name=&apos;firstname&apos; value=&apos;&quot; + (firstName == null ? &quot;&quot; : firstName)&#x0A;                + &quot;&apos; size=&apos;20&apos;&gt;&lt;/td&gt;&lt;/tr&gt;&quot;);&#x0A;        out.println(&quot;&lt;tr&gt;&lt;th&gt;Your last name: &lt;/th&gt;&lt;td &quot;);&#x0A;        if (action != null &amp;&amp; !lNameCheck)&#x0A;            out.println(&quot; style=&apos;background-color:red;&apos;&quot;);&#x0A;        out.println(&quot;&gt;&lt;input type=&apos;text&apos; name=&apos;lastname&apos; value=&apos;&quot; + (lastName == null ? &quot;&quot; : lastName)&#x0A;                + &quot;&apos; size=&apos;20&apos;&gt;&lt;/td&gt;&lt;/tr&gt;&quot;);&#x0A;        out.println(&quot;&lt;tr&gt;&lt;th&gt;Your email: &lt;/th&gt;&lt;td &quot;);&#x0A;        if (action != null &amp;&amp; !emailCheck)&#x0A;            out.println(&quot; style=&apos;background-color:red;&apos;&quot;);&#x0A;        out.println(&#x0A;                &quot;&gt;&lt;input type=&apos;text&apos; name=&apos;email&apos; value=&apos;&quot; + (email == null ? &quot;&quot; : email) + &quot;&apos; size=&apos;20&apos;&gt;&lt;/td&gt;&lt;/tr&gt;&quot;);&#x0A;        out.println(&quot;&lt;tr&gt;&lt;th&gt;Your message: &lt;/th&gt;&lt;td &quot;);&#x0A;        if (action != null &amp;&amp; !msgCheck)&#x0A;            out.println(&quot; style=&apos;background-color:red;&apos;&quot;);&#x0A;        out.println(&quot;&gt;&lt;textarea name=&apos;msg&apos; rows=&apos;10&apos; cols=&apos;30&apos;&gt;&quot;);&#x0A;        if (msg != null)&#x0A;            out.println(msg);&#x0A;        out.println(&quot;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;&quot;);&#x0A;        out.println(&quot;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;td&gt;&lt;input type=&apos;submit&apos; name=&apos;submit&apos; value=&apos;Submit Info&apos;&gt;&lt;/td&gt;&lt;/tr&gt;&quot;);&#x0A;        out.println(&quot;&lt;/table&gt;&lt;/form&gt;&quot;);&#x0A;        out.println(&quot;&lt;/div&gt;&quot;);&#x0A;        out.println(&quot;&lt;/body&gt;&lt;/html&gt;&quot;);&#x0A;        &#x0A;        &#x0A;        if (fNameCheck &amp;&amp; lNameCheck &amp;&amp; emailCheck &amp;&amp; msgCheck)&#x0A;            doPost(request, response);&#x0A;    }&#x0A;    &#x0A;&#x09;&#x0A;&#x09;public void doPost(HttpServletRequest request, HttpServletResponse response)&#x0A;&#x09;&#x09;&#x09;   throws ServletException, java.io.IOException {&#x0A;&#x09;&#x09;&#x09;&#x0A;&#x09;&#x09;  String userName=request.getParameter(&quot;username&quot;);&#x0A;&#x09;&#x09;  String password=request.getParameter(&quot;password&quot;);&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  String message= &quot;&quot;;&#x0A;&#x09;&#x09;  PrintWriter out=response.getWriter();&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  GregorianCalendar calendar=new GregorianCalendar();&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  if(calendar.get(Calendar.AM_PM)==Calendar.AM) {&#x0A;&#x09;&#x09;   message=&quot;Good Morning&quot;;&#x0A;&#x09;&#x09;   &#x0A;&#x09;&#x09;  }else {&#x0A;&#x09;&#x09;   &#x0A;&#x09;&#x09;   message=&quot;Good Afternoon&quot;;&#x0A;&#x09;&#x09;   &#x0A;&#x09;&#x09;  }&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  response.setContentType(&quot;text/html&quot;);&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  out.println(&quot;&lt;html&gt;&quot;);&#x0A;&#x09;&#x09;  out.println(&quot;&lt;body&gt;&quot;);&#x0A;&#x0A;&#x09;&#x09;  out.println(&quot;&lt;a href=&apos;index.html&apos;&gt;Back&lt;/a&gt;&quot;);&#x0A;&#x09;&#x09;  if(userName.equals(validUserName) &amp;&amp; password.equals(validPassWord)) {&#x0A;&#x09;&#x09;&#x09;     out.println(&quot;&lt;p&gt;&quot; + message + &quot;, &quot; + userName + &quot;&lt;/p&gt;&quot;);&#x0A;&#x09;&#x09;  } else {&#x0A;&#x09;&#x09;&#x09;    out.println(&quot;&lt;p&gt;&quot; + message+ &quot;! &quot;+ userName + &quot; not known! &lt;/p&gt;&quot;);&#x0A;&#x09;&#x09;&#x09;  &#x0A;&#x09;&#x09;  } &#x0A;&#x0A;&#x0A;&#x09;&#x09;  out.println(&quot;&lt;/body&gt;&quot;);&#x0A;&#x09;&#x09;  out.println(&quot;&lt;/html&gt;&quot;);&#x0A;&#x09;&#x09;  out.close();&#x09;&#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x09;&#x09;    &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09;  &#x0A;&#x09;&#x09; &#x0A;&#x09;&#x09; &#x0A;&#x09;}&#x0A;}"/>
-			<item value="Information"/>
+			<item value="setTempImageDir"/>
+			<item value="tempImageDir"/>
+			<item value="toString"/>
+			<item value="toS"/>
+			<item value="dbConnection"/>
+			<item value="readI"/>
+			<item value="readIma"/>
+			<item value="read"/>
+			<item value="settemp"/>
+			<item value="tempImageDirAbsolute"/>
+			<item value="write"/>
+			<item value="simple"/>
+			<item value="getImagename"/>
+			<item value="file[]"/>
+			<item value="b"/>
 		</list>
 		<list key="replacehistory">
 			<item value="InforData"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1018"/>
-		<item key="DIALOG_Y_ORIGIN" value="181"/>
+		<item key="DIALOG_X_ORIGIN" value="1352"/>
+		<item key="DIALOG_Y_ORIGIN" value="537"/>
 		<item key="DIALOG_WIDTH" value="294"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
