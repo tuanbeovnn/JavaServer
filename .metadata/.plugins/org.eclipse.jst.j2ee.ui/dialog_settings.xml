@@ -7,10 +7,14 @@
 		<item value="Apache Tomcat v8.5.9"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass9.war"/>
 		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass82.war"/>
 		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass81.war"/>
 		<item value="/usr/local/apache-tomcat-8.5.59/webapps/example61.war"/>
 		<item value="/usr/local/apache-tomcat-8.5.59/webapps/ass73user.war"/>
-		<item value="/usr/local/apache-tomcat-8.5.59/webapps/Ass73admin.war"/>
+	</list>
+	<list key="J2EE_IMPORT_null">
+		<item value="/Users/tuannguyen/Downloads/Example8_1.war"/>
+		<item value="/Users/tuannguyen/Downloads/Example8_1 (1).war"/>
 	</list>
 </section>
